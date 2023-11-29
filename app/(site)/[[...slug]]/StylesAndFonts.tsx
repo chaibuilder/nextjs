@@ -4,16 +4,19 @@ import { get } from "lodash";
 import Script from "next/script";
 
 export const StylesAndFonts = ({
-  brandingOptions,
+  project,
   styles,
   classPrefix = "c-",
 }: any) => {
-  const headingFont = get(brandingOptions, "headingFont", "");
-  const bodyFont = get(brandingOptions, "bodyFont", "");
+  const headingFont = get(project, "brandingOptions.headingFont", "");
+  const bodyFont = get(project, "brandingOptions.bodyFont", "");
+  const favicon = get(project, "favicon", "");
+
   const isDifferentFont = headingFont !== bodyFont;
 
   return (
     <>
+      {favicon && <link rel="icon" href={favicon} sizes="any" />}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
