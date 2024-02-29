@@ -1,4 +1,4 @@
-import { registerChaiDataProvider } from "@chaibuilder/blocks";
+import { registerChaiDataProvider } from "@chaibuilder/runtime";
 
 registerChaiDataProvider("home", {
   name: "Home",

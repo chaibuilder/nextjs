@@ -6,7 +6,7 @@ import type { Config } from "tailwindcss";
  */
 const config: Config = {
   content: [
-    "./chai-blocks/**/*.{js,ts,jsx,tsx,mdx}",
+    "./custom-blocks/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "node_modules/@chaibuilder/sdk/dist/*.{js,cjs}",
   ],
@@ -69,7 +69,6 @@ const config: Config = {
       },
     },
   },
-  // eslint-disable-next-line no-undef
   plugins: [],
 };
 export default config;

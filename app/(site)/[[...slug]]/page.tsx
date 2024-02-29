@@ -1,13 +1,13 @@
-import { getStylesForPageData } from "@chaibuilder/sdk/lib";
+import "@/data-providers";
+import "@/custom-blocks";
+import "@/app/globals.css";
 import { get, join } from "lodash";
-import { StylesAndFonts } from "./StylesAndFonts";
 import { notFound } from "next/navigation";
 import { chaiBuilder } from "@/app/chaiBuilder";
-import "@/data-providers";
-import "@/chai-blocks";
-import "@/app/globals.css";
 import { prepareExternalData } from "@chaibuilder/sdk/server";
+import { getStylesForPageData } from "@chaibuilder/sdk/lib";
 import { RenderChaiPage } from "@chaibuilder/sdk/render";
+import { StylesAndFonts } from "./StylesAndFonts";
 
 interface ChaiParams {
   params: { slug: string[] };
@@ -51,7 +51,7 @@ export default async function Home({ params }: ChaiParams) {
   if (!data) return notFound();
 
   const { data: externalData } = await prepareExternalData(
-    data.page.providers,
+    data.page.providers as any,
     pageSlug(params),
   );
   const styles = await getStylesForPageData(data);

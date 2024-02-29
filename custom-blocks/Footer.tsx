@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { registerChaiBlock } from "@chaibuilder/blocks";
+import { registerChaiBlock } from "@chaibuilder/runtime";
 
 export function Footer({ blockProps }: any) {
   const footerNavs = [
@@ -25,7 +25,10 @@ export function Footer({ blockProps }: any) {
     <footer {...blockProps} className="pt-10">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="space-y-6 sm:max-w-md sm:mx-auto sm:text-center">
-          <Link href="/" className="flex w-40 mx-auto items-center space-x-2">
+          <Link
+            href="/public"
+            className="flex w-40 mx-auto items-center space-x-2"
+          >
             <img
               src="/chaibuilder-logo.png"
               width={30}

@@ -2,14 +2,14 @@
 import "./chaibuilder.css";
 import "@chaibuilder/sdk/styles";
 import "@/data-providers";
-import "@/chai-blocks";
+import "@/custom-blocks";
 import dynamic from "next/dynamic";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const ChaiBuilderStudio = dynamic(
-  () => import("@chaibuilder/sdk").then((mod) => mod.ChaiBuilderStudio),
+  () => import("@chaibuilder/sdk/studio").then((mod) => mod.ChaiBuilderStudio),
   { ssr: false },
 );
 

@@ -1,5 +1,6 @@
-import { registerChaiBlock, Styles } from "@chaibuilder/blocks";
-import { HeaderClient } from "@/chai-blocks/custom/client/Header";
+import { registerChaiBlock } from "@chaibuilder/runtime";
+import { HeaderClient } from "@/custom-blocks/client/Header";
+import { Styles } from "@chaibuilder/runtime/controls";
 
 /**
  * Header block uses useEffect and hence is a client component.

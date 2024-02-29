@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ChaiBuilderLink from "@/chai-blocks/basic/chaibuilder-link";
 
 /**
  *
@@ -39,10 +38,7 @@ export function HeaderClient({ blockProps, signInBtnStyles, inBuilder }: any) {
     >
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block">
-          <ChaiBuilderLink
-            href="/"
-            style={{ className: "flex items-center space-x-2" }}
-          >
+          <a href="/" className="flex items-center space-x-2">
             <img
               src="/chaibuilder-logo.png"
               width={30}
@@ -51,7 +47,7 @@ export function HeaderClient({ blockProps, signInBtnStyles, inBuilder }: any) {
               className={"rounded-md"}
             />
             <span className="block w-40 text-lg font-bold">Chai Builder</span>
-          </ChaiBuilderLink>
+          </a>
           <div className="md:hidden">
             <button
               className="menu-btn text-gray-500 hover:text-gray-800"
@@ -98,28 +94,18 @@ export function HeaderClient({ blockProps, signInBtnStyles, inBuilder }: any) {
             {navigation.map((item, idx) => {
               return (
                 <li key={idx} className="text-gray-700 hover:text-gray-900">
-                  <ChaiBuilderLink
-                    href={item.path}
-                    style={{ className: "block" }}
-                  >
+                  <a href={item.path} className={"block"}>
                     {item.title}
-                  </ChaiBuilderLink>
+                  </a>
                 </li>
               );
             })}
           </ul>
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <ChaiBuilderLink
-              href="/#"
-              style={{ className: "block text-gray-700 hover:text-gray-900" }}
-            >
+            <a href="/#" className={"block text-gray-700 hover:text-gray-900"}>
               Log in
-            </ChaiBuilderLink>
-            <ChaiBuilderLink
-              href="/#"
-              inBuilder={inBuilder}
-              style={signInBtnStyles}
-            >
+            </a>
+            <a href="/#">
               Sign in
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +119,7 @@ export function HeaderClient({ blockProps, signInBtnStyles, inBuilder }: any) {
                   clipRule="evenodd"
                 />
               </svg>
-            </ChaiBuilderLink>
+            </a>
           </div>
         </div>
       </div>
