@@ -7,6 +7,9 @@ import dynamic from "next/dynamic";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { loadWebBlocks } from "@chaibuilder/sdk/web-blocks";
+
+loadWebBlocks();
 
 const ChaiBuilderStudio = dynamic(
   () => import("@chaibuilder/sdk/studio").then((mod) => mod.ChaiBuilderStudio),

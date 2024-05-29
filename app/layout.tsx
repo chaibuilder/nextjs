@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { loadWebBlocks } from "@chaibuilder/sdk/web-blocks";
+
+loadWebBlocks();
 
 const inter = Inter({ subsets: ["latin"] });
 
