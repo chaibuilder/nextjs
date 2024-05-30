@@ -95,8 +95,8 @@ export async function DELETE(
   const path = params.path.join("/");
   switch (path) {
     case "page":
-      const { searchParams } = _request.nextUrl;
-      const uuid = searchParams.get("uuid") as string;
+      const pageData = await _request.json();
+      const uuid = pageData.uuid as string;
       const page = await chaiBuilder.deletePage(uuid);
       return NextResponse.json(page);
     default:
