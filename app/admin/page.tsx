@@ -32,5 +32,5 @@ const Logo: React.FC<any> = () => {
 };
 
 export default function Home() {
-  return <ChaiBuilderStudio logo={Logo} />;
+  return <ChaiBuilderStudio dataBindingSupport={true} logo={Logo} />;
 }
