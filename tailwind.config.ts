@@ -4,7 +4,7 @@ const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./chai-blocks/**/*.{js,ts,jsx,tsx,mdx}", // include chai-blocks
-    "node_modules/@chaibuilder/runtime/dist/*.{js,ts,jsx,tsx,mdx}",
+    "node_modules/@chaibuilder/sdk/dist/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
